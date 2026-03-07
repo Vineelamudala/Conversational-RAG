@@ -1,0 +1,39 @@
+# RAG Chatbot - Compatible Requirements
+# Python 3.11 recommended
+
+# Streamlit
+streamlit
+
+# LangChain - let pip resolve compatible versions automatically
+langchain
+langchain-community
+langchain-text-splitters
+
+# LLM - Groq
+langchain-groq
+
+# Embeddings
+langchain-huggingface
+sentence-transformers
+
+# Vector DB
+langchain-pinecone
+pinecone
+
+# Reranker
+langchain-cohere
+cohere
+
+# Document loading
+pymupdf
+python-docx
+
+# Utilities
+python-dotenv
+uvicorn
+
+
+fastapi
+uvicorn
+python-multipart
+docx2txt
