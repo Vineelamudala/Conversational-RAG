@@ -8,7 +8,7 @@ Run:
 .env file needs:
     GROQ_API_KEY
     PINECONE_API_KEY
-    COHERE_API_KEY
+    COHERE_API_KEYY
 """
 
 import os
