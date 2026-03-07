@@ -126,4 +126,5 @@ COHERE_API_KEY     → cohere.com (free tier)
 ---
 
 ## 👨‍💻 Author
-**Vineel** — [GitHub](https://github.com/Vineel0508) · [LinkedIn](https://linkedin.com/in/yourprofile)
+**Vineel** — [GitHub](https://github.com/Vineel0508) · [LinkedIn](www.linkedin.com/in/vineel-amudala
+)
