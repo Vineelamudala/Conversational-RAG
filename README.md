@@ -14,7 +14,7 @@ pinned: false
 > ⚠️ **Note:** This is a **demo version** of a RAG system I built and worked on in a production environment.
 > Due to confidentiality, the actual production code cannot be shared publicly.
 > This repository replicates the **core architecture and functionality** of the production system
-> using the same tech stack, designed to demonstrate the concepts and implementation.
+> using the same tech stack, designed to demonstrate the concepts and implementation..
 
 ---
 
