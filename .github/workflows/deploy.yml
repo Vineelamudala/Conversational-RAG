@@ -1,33 +1,31 @@
 name: Deploy to Hugging Face Spaces
-# Triggers: runs automatically when you push to main branch
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout your GitHub repo code
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # fetch full history
-      # Step 2: Push code to Hugging Face Spaces
+          fetch-depth: 0
+
       - name: Push to Hugging Face Spaces
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
-          # Clone your HF Space repo
           git clone https://Vineel0508:$HF_TOKEN@huggingface.co/spaces/Vineel0508/Conversational-RAG hf_space
-          # Copy your latest files into it
           cp app.py hf_space/
           cp requirements.txt hf_space/
           cp README.md hf_space/
-          # Push to HF Spaces
+          cp Dockerfile hf_space/
           cd hf_space
           git add .
-          git diff --cached --quiet || git commit -m "Deploy from GitHub Actions - ${{ github.sha }}"
+          git diff --cached --quiet || git commit -m "Deploy from GitHub - ${{ github.sha }}"
           git push
