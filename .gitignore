@@ -1,0 +1,41 @@
+# ── API Keys — NEVER push these ───────────────────────────────
+.env
+*.env
+.env.local
+.env.example
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual Environments ──────────────────────────────────────
+env/
+venv/
+rag-env/
+.venv/
+
+# ── Temp files created during ingestion ───────────────────────
+*.tmp
+temp.pdf
+temp.docx
+temp.txt
+
+# ── IDE files ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store           # Mac
+Thumbs.db           # Windows
+desktop.ini         # Windows
+
+# ── HF Space clone used in CI/CD ──────────────────────────────
+hf_space/
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+logs/
