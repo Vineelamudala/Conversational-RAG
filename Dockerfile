@@ -11,11 +11,16 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Pre-download the HuggingFace model during build time
+# This avoids downloading at runtime inside the container
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+
 # Copy app
 COPY app.py .
 
-# Expose Streamlit port
+# Expose Streamlit port (HF Spaces requires 7860)
 EXPOSE 7860
 
-# Run Streamlit on port 7860 (HF Spaces requires this port)
-CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app.py", \
+     "--server.port=7860", \
+     "--server.address=0.0.0.0"]
