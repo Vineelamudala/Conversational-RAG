@@ -24,7 +24,6 @@ jobs:
           cp app.py hf_space/
           cp requirements.txt hf_space/
           cp README.md hf_space/
-          cp Dockerfile hf_space/
           cd hf_space
           git add .
           git diff --cached --quiet || git commit -m "Deploy from GitHub - ${{ github.sha }}"
