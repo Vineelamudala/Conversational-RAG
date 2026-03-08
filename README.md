@@ -3,9 +3,9 @@ title: Conversational RAG
 emoji: 🤖
 colorFrom: blue
 colorTo: indigo
-sdk: docker
-sdk_version: "3.10"
-app_file: app.py 
+sdk: streamlit
+sdk_version: 1.42.0
+app_file: app.py
 pinned: false
 ---
 
